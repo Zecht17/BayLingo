@@ -288,7 +288,7 @@ class LearnLetra extends StatelessWidget {
               ),
             ),
             Positioned(
-              left: 165,
+              left: 166.5,
               top: 730,
               child: GestureDetector(
                 onTap: () {
