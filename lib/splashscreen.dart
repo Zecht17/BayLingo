@@ -60,8 +60,8 @@ class _SplashScreenState extends State<SplashScreen>
             ),
             SizedBox(height: 1),
             Text('Bay-Lingo', style: TextStyle(
-              fontFamily: 'SfProDisplay',
-              fontWeight: FontWeight.bold,
+              fontFamily: 'Inder',
+              fontWeight: FontWeight.normal,
               color: Colors.black,
               fontSize: 40,
             ),
