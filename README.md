@@ -1,6 +1,6 @@
-# bay_lingo
+# Bay Lingo
 
-A new Flutter project.
+Is a language learning app that helps you learn and understand Baybayin.
 
 ## Getting Started
 
