@@ -620,6 +620,15 @@ class LearnLetra extends StatelessWidget {
                 ),
               ),
             ),
+            const Positioned(
+              left: 20,
+                top: 250,
+                child: Image(
+                    image: AssetImage('assets/a.png'),
+                  width: 75,
+                  height: 75,
+                ),
+            )
           ],
         ),
       ),
