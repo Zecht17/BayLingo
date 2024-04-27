@@ -303,7 +303,7 @@ class LearnLetra extends StatelessWidget {
             ),
             const Positioned(
               left: 140,
-              top: 180,
+              top: 165,
               child: Text(
                 'PATINIG',
                 style: TextStyle(
@@ -321,7 +321,7 @@ class LearnLetra extends StatelessWidget {
             ),
             const Positioned(
               left: 152.5,
-              top: 220,
+              top: 205,
               child: Text(
                 '(VOWELS)',
                 style: TextStyle(
@@ -334,10 +334,10 @@ class LearnLetra extends StatelessWidget {
               ),
             ),
             Positioned(
-              bottom: 480,
+              bottom: 495,
               left: 170,
               right: 170,
-              top: 260,
+              top: 245,
               child: Container(
                 width: 50,
                 height: 50,
@@ -348,10 +348,10 @@ class LearnLetra extends StatelessWidget {
               ),
             ),
             Positioned(
-              bottom: 480,
+              bottom: 495,
               left: 260,
               right: 80,
-              top: 260,
+              top: 245,
               child: Container(
                 width: 100,
                 height: 100,
@@ -362,10 +362,10 @@ class LearnLetra extends StatelessWidget {
               ),
             ),
             Positioned(
-              bottom: 480,
+              bottom: 495,
               left: 80,
               right: 260,
-              top: 260,
+              top: 245,
               child: Container(
                 width: 50,
                 height: 50,
@@ -620,15 +620,125 @@ class LearnLetra extends StatelessWidget {
                 ),
               ),
             ),
+            const Positioned( // Vowels
+              right: 45,
+              top: 45,
+              child: Image(
+                image: AssetImage('assets/a.png'),
+                width: 500,
+                height: 500,
+              ),
+            ),
             const Positioned(
-              left: 20,
-                top: 250,
-                child: Image(
-                    image: AssetImage('assets/a.png'),
-                  width: 75,
-                  height: 75,
+              left: 95,
+              top: 315,
+              child: Text(
+                'A-a',
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.normal,
+                  fontStyle: FontStyle.italic,
+                  letterSpacing: 1.0,
+                  color: Colors.black,
                 ),
-            )
+              ),
+            ),
+            const Positioned(
+              left: 0,
+              right: 0,
+              top: 30,
+              child: Image(
+                image: AssetImage('assets/i.png'),
+                width: 500,
+                height: 500,
+              ),
+            ),
+            const Positioned(
+              left: 195,
+              top: 315,
+              child: Text(
+                'I-i',
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.normal,
+                  fontStyle: FontStyle.italic,
+                  letterSpacing: 1.0,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            const Positioned(
+              left: 45,
+              top: 30,
+              child: Image(
+                image: AssetImage('assets/o.png'),
+                width: 500,
+                height: 500,
+              ),
+            ),
+            const Positioned(
+              left: 275,
+              top: 315,
+              child: Text(
+                'O-o',
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.normal,
+                  fontStyle: FontStyle.italic,
+                  letterSpacing: 1.0,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            const Positioned( // First row consonants
+              right: 115,
+              top: 212,
+              child: Image(
+                image: AssetImage('assets/ba.png'),
+                width: 500,
+                height: 500,
+              ),
+            ),
+            const Positioned(
+              right: 35,
+              top: 212,
+              child: Image(
+                image: AssetImage('assets/ka.png'),
+                width: 500,
+                height: 500,
+              ),
+            ),
+            const Positioned(
+              left: 0,
+              right: 0,
+              top: 212,
+              child: Image(
+                image: AssetImage('assets/da.png'),
+                width: 500,
+                height: 500,
+              ),
+            ),
+            const Positioned(
+              left: 35,
+              top: 212,
+              child: Image(
+                image: AssetImage('assets/ga.png'),
+                width: 500,
+                height: 500,
+              ),
+            ),
+            const Positioned(
+              left: 115,
+              top: 212,
+              child: Image(
+                image: AssetImage('assets/ha.png'),
+                width: 500,
+                height: 500,
+              ),
+            ),
           ],
         ),
       ),
