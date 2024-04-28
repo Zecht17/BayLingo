@@ -275,32 +275,6 @@ class LearnLetra extends StatelessWidget {
                 ),
               ),
             ),
-            Positioned(
-              top: 733,
-              right: 170,
-              child: Container(
-                width: 75,
-                height: 75,
-                decoration: const BoxDecoration(
-                  color: Color(0xFF323232),
-                  shape: BoxShape.circle, // Circle
-                ),
-              ),
-            ),
-            Positioned(
-              left: 166.5,
-              top: 730,
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, '/home');
-                },
-                child: const Image(
-                  image: AssetImage('images/homeicon.png'),
-                  width: 75,
-                  height: 75,
-                ),
-              ),
-            ),
             const Positioned(
               left: 140,
               top: 165,
@@ -622,7 +596,7 @@ class LearnLetra extends StatelessWidget {
             ),
             const Positioned( // Vowels
               right: 45,
-              top: 45,
+              top: 33,
               child: Image(
                 image: AssetImage('assets/a.png'),
                 width: 500,
@@ -655,10 +629,10 @@ class LearnLetra extends StatelessWidget {
               ),
             ),
             const Positioned(
-              left: 195,
+              left: 190,
               top: 315,
               child: Text(
-                'I-i',
+                'E-I',
                 style: TextStyle(
                   fontFamily: 'Microsoft',
                   fontSize: 20.0,
@@ -679,10 +653,10 @@ class LearnLetra extends StatelessWidget {
               ),
             ),
             const Positioned(
-              left: 275,
+              left: 273,
               top: 315,
               child: Text(
-                'O-o',
+                'O-U',
                 style: TextStyle(
                   fontFamily: 'Microsoft',
                   fontSize: 20.0,
@@ -703,12 +677,42 @@ class LearnLetra extends StatelessWidget {
               ),
             ),
             const Positioned(
+              left: 30,
+              top: 500,
+              child: Text(
+                'Ba',
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.normal,
+                  fontStyle: FontStyle.italic,
+                  letterSpacing: 1.0,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            const Positioned(
               right: 35,
               top: 212,
               child: Image(
                 image: AssetImage('assets/ka.png'),
                 width: 500,
                 height: 500,
+              ),
+            ),
+            const Positioned(
+              left: 112,
+              top: 500,
+              child: Text(
+                'Ka',
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.normal,
+                  fontStyle: FontStyle.italic,
+                  letterSpacing: 1.0,
+                  color: Colors.black,
+                ),
               ),
             ),
             const Positioned(
@@ -722,6 +726,21 @@ class LearnLetra extends StatelessWidget {
               ),
             ),
             const Positioned(
+              left: 175,
+              top: 500,
+              child: Text(
+                'Da/Ra',
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.normal,
+                  fontStyle: FontStyle.italic,
+                  letterSpacing: 1.0,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            const Positioned(
               left: 35,
               top: 212,
               child: Image(
@@ -731,12 +750,334 @@ class LearnLetra extends StatelessWidget {
               ),
             ),
             const Positioned(
+              left: 270,
+              top: 500,
+              child: Text(
+                'Ga',
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.normal,
+                  fontStyle: FontStyle.italic,
+                  letterSpacing: 1.0,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            const Positioned(
               left: 115,
               top: 212,
               child: Image(
                 image: AssetImage('assets/ha.png'),
                 width: 500,
                 height: 500,
+              ),
+            ),
+            const Positioned(
+              left: 350,
+              top: 500,
+              child: Text(
+                'Ha',
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.normal,
+                  fontStyle: FontStyle.italic,
+                  letterSpacing: 1.0,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            const Positioned( // Second row consonants
+              right: 115,
+              top: 312,
+              child: Image(
+                image: AssetImage('assets/la.png'),
+                width: 500,
+                height: 500,
+              ),
+            ),
+            const Positioned(
+              left: 30,
+              top: 600,
+              child: Text(
+                'La',
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.normal,
+                  fontStyle: FontStyle.italic,
+                  letterSpacing: 1.0,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            const Positioned(
+              right: 35,
+              top: 312,
+              child: Image(
+                image: AssetImage('assets/ma.png'),
+                width: 500,
+                height: 500,
+              ),
+            ),
+            const Positioned(
+              left: 112,
+              top: 600,
+              child: Text(
+                'Ma',
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.normal,
+                  fontStyle: FontStyle.italic,
+                  letterSpacing: 1.0,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            const Positioned(
+              left: 0,
+              right: 0,
+              top: 312,
+              child: Image(
+                image: AssetImage('assets/na.png'),
+                width: 500,
+                height: 500,
+              ),
+            ),
+            const Positioned(
+              left: 193,
+              top: 600,
+              child: Text(
+                'Na',
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.normal,
+                  fontStyle: FontStyle.italic,
+                  letterSpacing: 1.0,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            const Positioned(
+              left: 35,
+              top: 312,
+              child: Image(
+                image: AssetImage('assets/nga.png'),
+                width: 500,
+                height: 500,
+              ),
+            ),
+            const Positioned(
+              left: 270,
+              top: 600,
+              child: Text(
+                'Nga',
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.normal,
+                  fontStyle: FontStyle.italic,
+                  letterSpacing: 1.0,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            const Positioned(
+              left: 115,
+              top: 312,
+              child: Image(
+                image: AssetImage('assets/pa.png'),
+                width: 500,
+                height: 500,
+              ),
+            ),
+            const Positioned(
+              left: 350,
+              top: 600,
+              child: Text(
+                'Pa',
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.normal,
+                  fontStyle: FontStyle.italic,
+                  letterSpacing: 1.0,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            const Positioned( // Third row consonants
+              right: 115,
+              top: 412,
+              child: Image(
+                image: AssetImage('assets/sa.png'),
+                width: 500,
+                height: 500,
+              ),
+            ),
+            const Positioned(
+              left: 30,
+              top: 700,
+              child: Text(
+                'Sa',
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.normal,
+                  fontStyle: FontStyle.italic,
+                  letterSpacing: 1.0,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            const Positioned(
+              right: 35,
+              top: 412,
+              child: Image(
+                image: AssetImage('assets/ta.png'),
+                width: 500,
+                height: 500,
+              ),
+            ),
+            const Positioned(
+              left: 112,
+              top: 700,
+              child: Text(
+                'Ta',
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.normal,
+                  fontStyle: FontStyle.italic,
+                  letterSpacing: 1.0,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            const Positioned(
+              left: 0,
+              right: 0,
+              top: 412,
+              child: Image(
+                image: AssetImage('assets/wa.png'),
+                width: 500,
+                height: 500,
+              ),
+            ),
+            const Positioned(
+              left: 190,
+              top: 700,
+              child: Text(
+                'Wa',
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.normal,
+                  fontStyle: FontStyle.italic,
+                  letterSpacing: 1.0,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            const Positioned(
+              left: 35,
+              top: 412,
+              child: Image(
+                image: AssetImage('assets/ya.png'),
+                width: 500,
+                height: 500,
+              ),
+            ),
+            const Positioned(
+              left: 270,
+              top: 700,
+              child: Text(
+                'Ya',
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.normal,
+                  fontStyle: FontStyle.italic,
+                  letterSpacing: 1.0,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            const Positioned(
+              left: 118,
+              top: 412,
+              child: Image(
+                image: AssetImage('assets/slash.png'),
+                width: 500,
+                height: 500,
+              ),
+            ),
+            Positioned(
+              top: 650,
+              left: 350,
+              child: Container(
+                width: 10,
+                height: 10,
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  shape: BoxShape.circle, // Circle
+                ),
+              ),
+            ),
+            Positioned(
+              top: 670,
+              left: 378,
+              child: Container(
+                width: 10,
+                height: 10,
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  shape: BoxShape.circle, // Circle
+                ),
+              ),
+            ),
+            const Positioned(
+              left: 350,
+              top: 700,
+              child: Text(
+                'e/o',
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.normal,
+                  fontStyle: FontStyle.italic,
+                  letterSpacing: 1.0,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            Positioned(
+              top: 733,
+              right: 170,
+              child: Container(
+                width: 75,
+                height: 75,
+                decoration: const BoxDecoration(
+                  color: Color(0xFF323232),
+                  shape: BoxShape.circle, // Circle
+                ),
+              ),
+            ),
+            Positioned(
+              left: 166.5,
+              top: 730,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/home');
+                },
+                child: const Image(
+                  image: AssetImage('images/homeicon.png'),
+                  width: 75,
+                  height: 75,
+                ),
               ),
             ),
           ],
