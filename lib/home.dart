@@ -1128,7 +1128,7 @@ class LearnSalita extends StatelessWidget {
               ),
             ),
             Positioned(
-              left: 165,
+              left: 166.5,
               top: 730,
               child: GestureDetector(
                 onTap: () {
@@ -1190,7 +1190,7 @@ class QuizLetra extends StatelessWidget {
               ),
             ),
             Positioned(
-              left: 165,
+              left: 166.5,
               top: 730,
               child: GestureDetector(
                 onTap: () {
@@ -1251,7 +1251,7 @@ class QuizSalita extends StatelessWidget {
               ),
             ),
             Positioned(
-              left: 165,
+              left: 166.5,
               top: 730,
               child: GestureDetector(
                 onTap: () {
