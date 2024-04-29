@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
         '/learn_salita': (context) => const LearnSalita(),
         '/quiz_salita': (context) => const QuizSalita(),
         '/about_us': (context) => const AboutUs(),
+        '/help': (context) => const Help(),
       },
     );
   }
@@ -1085,7 +1086,7 @@ class LearnLetra extends StatelessWidget {
             ),
             Positioned(
               top: 758,
-              left: 245,
+              left: 244,
               child: Container(
                 width: 50,
                 height: 50,
@@ -1096,11 +1097,37 @@ class LearnLetra extends StatelessWidget {
               ),
             ),
             Positioned(
-              left: 247.5,
-              top: 760,
+              left: 250,
+              top: 762,
               child: GestureDetector(
                 onTap: () {
                   Navigator.pushNamed(context, '/about_us');
+                },
+                child: const Image(
+                  image: AssetImage('images/info_white.png'),
+                  width: 40,
+                  height: 40,
+                ),
+              ),
+            ),
+            Positioned(
+              top: 758,
+              right: 248,
+              child: Container(
+                width: 50,
+                height: 50,
+                decoration: const BoxDecoration(
+                  color: Color(0xFF323232),
+                  shape: BoxShape.circle, // Circle
+                ),
+              ),
+            ),
+            Positioned(
+              right: 250,
+              top: 760,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/help');
                 },
                 child: const Image(
                   image: AssetImage('images/about_us.png'),
@@ -1264,6 +1291,32 @@ class LearnSalita extends StatelessWidget {
               child: GestureDetector(
                 onTap: () {
                   Navigator.pushNamed(context, '/about_us');
+                },
+                child: const Image(
+                  image: AssetImage('images/about_us.png'),
+                  width: 45,
+                  height: 45,
+                ),
+              ),
+            ),
+            Positioned(
+              top: 758,
+              right: 248,
+              child: Container(
+                width: 50,
+                height: 50,
+                decoration: const BoxDecoration(
+                  color: Color(0xFF323232),
+                  shape: BoxShape.circle, // Circle
+                ),
+              ),
+            ),
+            Positioned(
+              right: 250,
+              top: 760,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/help');
                 },
                 child: const Image(
                   image: AssetImage('images/about_us.png'),
@@ -1442,6 +1495,12 @@ class AboutUs extends StatelessWidget {
                 ),
               ),
             ),
+
+            const Image(
+                image: AssetImage('images/contact_us.png'),
+              width: 1000,
+              height: 1000,
+            ),
             Positioned(
               top: 733,
               right: 170,
@@ -1468,31 +1527,76 @@ class AboutUs extends StatelessWidget {
                 ),
               ),
             ),
-            const Positioned(
-              left: 120,
-              top: 25,
-              child: Text(
-                'About Bay-Lingo',
-                style: TextStyle(
-                    fontFamily: 'Microsoft',
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.normal,
-                    letterSpacing: 1.0,
-                    color: Colors.white
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class Help extends StatelessWidget {
+  const Help ({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Help',
+          style: TextStyle(
+              fontFamily: 'SfProDisplay',
+              fontSize: 30,
+              fontWeight: FontWeight.normal,
+              color: Colors.white
+          ),
+        ),
+        backgroundColor: const Color(0xFF323232),
+        leading: Image.asset(
+          'images/baylingo_logo.png',
+          width: 50,
+          height: 50,
+          fit: BoxFit.contain,
+        ),
+      ),
+      backgroundColor: const Color(0xFFFFF2E6),
+      body: SafeArea(
+        child: Stack(
+          children: <Widget>[
+            Positioned.fill(
+              child: Opacity(
+                opacity: 0.07, // Set opacity value (0.0 to 1.0)
+                child: Transform.rotate(
+                  angle: pi, // Specify the angle of rotation in radians
+                  child: Image.asset(
+                    'images/baybayin_background.png',
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),
-            const Positioned(
-              left: 35,
-              top: 95,
-              child: Text(
-                '"Bay-Lingo" is a learning',
-                style: TextStyle(
-                    fontFamily: 'MergeOne',
-                    fontSize: 18.0,
-                    fontWeight: FontWeight.normal,
-                    letterSpacing: 1.0,
-                    color: Colors.white
+            Positioned(
+              top: 733,
+              right: 170,
+              child: Container(
+                width: 75,
+                height: 75,
+                decoration: const BoxDecoration(
+                  color: Color(0xFF323232),
+                  shape: BoxShape.circle, // Circle
+                ),
+              ),
+            ),
+            Positioned(
+              left: 166.5,
+              top: 730,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/home');
+                },
+                child: const Image(
+                  image: AssetImage('images/homeicon.png'),
+                  width: 75,
+                  height: 75,
                 ),
               ),
             ),
