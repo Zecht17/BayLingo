@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         '/quiz_salita': (context) => const QuizSalita(),
         '/about_us': (context) => const AboutUs(),
         '/help': (context) => const Help(),
-        '/return_letra': (context) => const LearnLetra(),
+        '/return_phrases': (context) => const LearnSalitaPhrases(),
         '/return_salita': (context) => const LearnSalita(),
       },
     );
