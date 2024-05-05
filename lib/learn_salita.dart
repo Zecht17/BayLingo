@@ -471,101 +471,645 @@ class _LearnSalitaState extends State<LearnSalita> {
               ),
             ),
             Positioned(
-              left: _isExpanded? 135 : 135,
-              top: _isExpanded? 85 : 420,
+              left: _isExpanded? 10 : 135,
+              top: _isExpanded? 120 : 900,
               child: const AnimatedDefaultTextStyle(
                 duration: Duration(milliseconds: 500),
                 curve: Curves.fastEaseInToSlowEaseOut,
                 style: TextStyle(
                   fontFamily: 'Microsoft',
                   fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
+                ),
+                child: Text('How do dots work in Baybayin?'),
+              ),
+            ),
+            Positioned(
+              left: _isExpanded? 10 : 135,
+              top: _isExpanded? 145 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 18.0,
                   fontWeight: FontWeight.normal,
                   letterSpacing: 1.0,
                   color: Colors.white,
                 ),
-                child: Text('(How are you?)'),
+                child: Text('The dot symbolizes the vowels. Basically,'),
               ),
             ),
             Positioned(
-              top: _isExpandedTwo ? 0 : 480,
-              bottom: _isExpandedTwo ? 0 : 170,
-              left: _isExpandedTwo ? 0 : 20,
-              right: _isExpandedTwo ? 0 : 20,
-              child: Visibility(
-                visible: !_isExpanded, // Make it invisible when the first shape is expanded
-                child: GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      _isExpandedTwo = !_isExpandedTwo;
-                      _containerColorTwo = _isExpandedTwo
-                          ? const Color(0xFF908C8A)
-                          : const Color(0xFF323232);
-                    });
-                  },
-                  child: AnimatedContainer(
-                    duration: const Duration(milliseconds: 1500),
-                    curve: Curves.fastEaseInToSlowEaseOut,
-                    width: _isExpandedTwo
-                        ? MediaQuery.of(context).size.width * 0.5
-                        : 70, // Adjust the width to 80% of the screen width when expanded
-                    height: _isExpandedTwo
-                        ? MediaQuery.of(context).size.height * 0.4
-                        : 70, // Adjust the height to 60% of the screen height when expanded
-                    decoration: BoxDecoration(
-                      color: _containerColorTwo,
-                      borderRadius: BorderRadius.circular(
-                          _isExpandedTwo ? 20 : 26), // Adjust the border radius when expanded
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
-                          spreadRadius: 5,
-                          blurRadius: 8,
-                          offset: const Offset(0, 3),
-                        ),
-                      ],
-                    ),
-                  ),
+              left: _isExpanded? 12 : 135,
+              top: _isExpanded? 165 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.normal,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
                 ),
+                child: Text('the upper dot means e or i, while the bottom'),
               ),
             ),
             Positioned(
-              left: _isExpandedTwo ? 20 : 0,
-              right: _isExpandedTwo ? 20 : 0,
-              top: _isExpandedTwo ? 100 : 260,
-
-              child: GestureDetector(
-                onTap: () {
-                  setState(() {
-                    _isExpandedTwo = !_isExpandedTwo;
-                    _containerColorTwo = _isExpandedTwo
-                        ? const Color(0xFF908C8A)
-                        : const Color(0xFF323232);
-                  });
-                },
-                child: AnimatedContainer(
-                  duration: const Duration(milliseconds: 500),
-                  curve: Curves.fastEaseInToSlowEaseOut,
-                  width: 500, // fixed width
-                  height: 500, // fixed height
-                  alignment: Alignment.center, // center the image
-                  child: const Image(
-                    image: AssetImage('assets/salamat.png'),
-                    fit: BoxFit.contain, // scale the image to fit the container
-                  ),
+              left: _isExpanded? 12 : 135,
+              top: _isExpanded? 185 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.normal,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
                 ),
+                child: Text('dot signifies'),
               ),
             ),
-            if (_isExpandedTwo) // Conditionally show the image when expanded
+            Positioned(
+              left: _isExpanded? 125 : 135,
+              top: _isExpanded? 185 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
+                ),
+                child: Text('o'),
+              ),
+            ),
+            Positioned(
+              left: _isExpanded? 140 : 135,
+              top: _isExpanded? 185 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.normal,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
+                ),
+                child: Text('or'),
+              ),
+            ),
+            Positioned(
+              left: _isExpanded? 163 : 135,
+              top: _isExpanded? 185 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
+                ),
+                child: Text('u.'),
+              ),
+            ),
+            Positioned(
+              left: _isExpanded? 185 : 135,
+              top: _isExpanded? 185 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.normal,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
+                ),
+                child: Text('We don\'t put a dot if the'),
+              ),
+            ),
+            Positioned(
+              left: _isExpanded? 12 : 135,
+              top: _isExpanded? 205 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.normal,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
+                ),
+                child: Text('default a is used. '),
+              ),
+            ),
+            Positioned(
+              left: _isExpanded? 10 : 135,
+              top: _isExpanded? 250 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
+                ),
+                child: Text('How do cross work in Baybayin?'),
+              ),
+            ),
+            Positioned(
+              left: _isExpanded? 12 : 135,
+              top: _isExpanded? 275 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.normal,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
+                ),
+                child: Text('Since baybayin letters are combined'),
+              ),
+            ),
+            Positioned(
+              left: _isExpanded? 12 : 135,
+              top: _isExpanded? 295 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.normal,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
+                ),
+                child: Text('with two letters, we use a cross to cut out'),
+              ),
+            ),
+            Positioned(
+              left: _isExpanded? 12 : 135,
+              top: _isExpanded? 315 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.normal,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
+                ),
+                child: Text('letter and form a word. Ideally, the second'),
+              ),
+            ),
+            Positioned(
+              left: _isExpanded? 12 : 135,
+              top: _isExpanded? 335 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.normal,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
+                ),
+                child: Text('of combined letters is usually cut out.'),
+              ),
+            ),
+            if (_isExpanded) // Conditionally show the image when expanded
               Positioned(
-                left: 0,
-                right: 0,
-                bottom: 580,
+                right: 240,
+                bottom: 285,
                 child: Image.asset(
-                  'assets/salamat.png',
+                  'assets/ku.png',
+                  width: MediaQuery.of(context).size.width * 0.70,
+                  fit: BoxFit.contain,
+                ),
+              ),
+            Positioned(
+              left: _isExpanded? 50 : 135,
+              top: _isExpanded? 375 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
+                ),
+                child: Text('= Ku.'),
+              ),
+            ),
+            Positioned(
+              left: _isExpanded? 107 : 135,
+              top: _isExpanded? 377 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.normal,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
+                ),
+                child: Text('As you can see, it has a dot at the'),
+              ),
+            ),
+            Positioned(
+              left: _isExpanded? 12 : 135,
+              top: _isExpanded? 400 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.normal,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
+                ),
+                child: Text('bottom part which signifies o and u. Hence,'),
+              ),
+            ),
+            if (_isExpanded) // Conditionally show the image when expanded
+              Positioned(
+                right: 240,
+                bottom: 235,
+                child: Image.asset(
+                  'assets/ka.png',
+                  width: MediaQuery.of(context).size.width * 0.7,
+                  fit: BoxFit.contain,
+                ),
+              ),
+            Positioned(
+              left: _isExpanded? 50 : 135,
+              top: _isExpanded? 420 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.normal,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
+                ),
+                child: Text('which means Ka but replaced it with'),
+              ),
+            ),
+            if (_isExpanded) // Conditionally show the image when expanded
+              Positioned(
+                right: 270,
+                bottom: 245,
+                child: Image.asset(
+                  'assets/ku.png',
+                  width: MediaQuery.of(context).size.width * 0.55,
+                  fit: BoxFit.contain,
+                ),
+              ),
+            Positioned(
+              left: _isExpanded? 50 : 135,
+              top: _isExpanded? 440 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.normal,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
+                ),
+                child: Text('Ku by putting a dot.'),
+              ),
+            ),
+            if (_isExpanded) // Conditionally show the image when expanded
+              Positioned(
+                right: 240,
+                bottom: 180,
+                child: Image.asset(
+                  'assets/mu.png',
+                  width: MediaQuery.of(context).size.width * 0.70,
+                  fit: BoxFit.contain,
+                ),
+              ),
+            Positioned(
+              left: _isExpanded? 50 : 135,
+              top: _isExpanded? 480 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
+                ),
+                child: Text('= Mu.'),
+              ),
+            ),
+            Positioned(
+              left: _isExpanded? 110 : 135,
+              top: _isExpanded? 481 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.normal,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
+                ),
+                child: Text('Same rule also applies with Mu.'),
+              ),
+            ),
+            Positioned(
+              left: _isExpanded? 12 : 135,
+              top: _isExpanded? 505 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.normal,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
+                ),
+                child: Text('We put a bottom dot to replace'),
+              ),
+            ),
+            if (_isExpanded) // Conditionally show the image when expanded
+              Positioned(
+                left: 160,
+                bottom: 152,
+                child: Image.asset(
+                  'assets/ma.png',
+                  width: MediaQuery.of(context).size.width * 0.7,
+                  fit: BoxFit.contain,
+                ),
+              ),
+            Positioned(
+              left: _isExpanded? 320 : 135,
+              top: _isExpanded? 505 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
+                ),
+                child: Text('(Ma)'),
+              ),
+            ),
+            Positioned(
+              left: _isExpanded? 12 : 135,
+              top: _isExpanded? 525 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.normal,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
+                ),
+                child: Text('with'),
+              ),
+            ),
+            if (_isExpanded) // Conditionally show the image when expanded
+              Positioned(
+                right: 200,
+                bottom: 132,
+                child: Image.asset(
+                  'assets/ma.png',
+                  width: MediaQuery.of(context).size.width * 0.7,
+                  fit: BoxFit.contain,
+                ),
+              ),
+            Positioned(
+              left: _isExpanded? 85 : 135,
+              top: _isExpanded? 525 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
+                ),
+                child: Text('(Mu).'),
+              ),
+            ),
+            if (_isExpanded) // Conditionally show the image when expanded
+              Positioned(
+                right: 240,
+                bottom: 103,
+                child: Image.asset(
+                  'assets/s.png',
+                  width: MediaQuery.of(context).size.width * 0.70,
+                  fit: BoxFit.contain,
+                ),
+              ),
+            Positioned(
+              left: _isExpanded? 50 : 135,
+              top: _isExpanded? 558 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
+                ),
+                child: Text('= S.'),
+              ),
+            ),
+            Positioned(
+              left: _isExpanded? 95 : 135,
+              top: _isExpanded? 559 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.normal,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
+                ),
+                child: Text('Since we only need the word s to'),
+              ),
+            ),
+            Positioned(
+              left: _isExpanded? 12 : 135,
+              top: _isExpanded? 585 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.normal,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
+                ),
+                child: Text('form the word kumusta. We will cut out the'),
+              ),
+            ),
+            Positioned(
+              left: _isExpanded? 12 : 135,
+              top: _isExpanded? 605 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.normal,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
+                ),
+                child: Text('by using a cross. '),
+              ),
+            ),
+            if (_isExpanded) // Conditionally show the image when expanded
+              Positioned(
+                right: 175,
+                top: 440,
+                child: Image.asset(
+                  'assets/ta.png',
                   width: MediaQuery.of(context).size.width,
                   fit: BoxFit.contain,
                 ),
               ),
+            Positioned(
+              left: _isExpanded? 50 : 135,
+              top: _isExpanded? 641 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
+                ),
+                child: Text('= Ta.'),
+              ),
+            ),
+            Positioned(
+              left: _isExpanded? 106 : 135,
+              top: _isExpanded? 642 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.normal,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
+                ),
+                child: Text('Neither a dot nor a cross is'),
+              ),
+            ),
+            Positioned(
+              left: _isExpanded? 12 : 135,
+              top: _isExpanded? 660 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.normal,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
+                ),
+                child: Text('applied to these two letters because'),
+              ),
+            ),
+            Positioned(
+              left: _isExpanded? 337 : 135,
+              top: _isExpanded? 660 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
+                ),
+                child: Text('Ta'),
+              ),
+            ),
+            Positioned(
+              left: _isExpanded? 12 : 135,
+              top: _isExpanded? 679 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.normal,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
+                ),
+                child: Text('is already its default form. We only use dots'),
+              ),
+            ),
+            Positioned(
+              left: _isExpanded? 12 : 135,
+              top: _isExpanded? 699 : 900,
+              child: const AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.fastEaseInToSlowEaseOut,
+                style: TextStyle(
+                  fontFamily: 'Microsoft',
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.normal,
+                  letterSpacing: 1.0,
+                  color: Colors.white,
+                ),
+                child: Text('if changing the last letter is desired.'),
+              ),
+            ),
           ],
         ),
       ),

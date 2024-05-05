@@ -225,6 +225,15 @@ class QuizLetra extends StatelessWidget {
       body: SafeArea(
         child: Stack(
           children: <Widget>[
+            Positioned.fill(
+              child: Opacity(
+                opacity: 0.07, // Set opacity value (0.0 to 1.0)
+                child: Image.asset(
+                  'images/baybayin_background.png',
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
             Positioned(
               top: 733,
               right: 170,
@@ -248,6 +257,60 @@ class QuizLetra extends StatelessWidget {
                   image: AssetImage('images/homeicon.png'),
                   width: 75,
                   height: 75,
+                ),
+              ),
+            ),
+            Positioned(
+              left: 20,
+              top: 20,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/learn_letra');
+                },
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(26), // Set the border radius here
+                  child: Image.asset(
+                    'images/easy.png',
+                    width: 380,
+                    height: 129,
+                    fit: BoxFit.cover, // Ensure that the image covers the entire container
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              left: 20,
+              top: 280,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/learn_letra');
+                },
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(26), // Set the border radius here
+                  child: Image.asset(
+                    'images/medium.png',
+                    width: 380,
+                    height: 129,
+                    fit: BoxFit.cover, // Ensure that the image covers the entire container
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              left: 20,
+              top: 480,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/learn_letra');
+                },
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(26), // Set the border radius here
+                  child: Image.asset(
+                    'images/hard.png',
+                    width: 380,
+                    height: 129,
+                    fit: BoxFit.cover, // Ensure that the image covers the entire container
+                  ),
                 ),
               ),
             ),
