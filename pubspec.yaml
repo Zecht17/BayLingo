@@ -38,6 +38,21 @@ flutter:
   assets:
     - images/
     - assets/
+    - assets/bigger_a.png
+    - assets/bigger_ba.png
+    - assets/bigger_da.png
+    - assets/bigger_ga.png
+    - assets/bigger_ha.png
+    - assets/bigger_ka.png
+    - assets/bigger_la.png
+    - assets/bigger_ma.png
+    - assets/bigger_na.png
+    - assets/bigger_nga.png
+    - assets/bigger_pa.png
+    - assets/bigger_sa.png
+    - assets/bigger_ta.png
+    - assets/bigger_wa.png
+    - assets/bigger_ya.png
 
 
 

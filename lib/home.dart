@@ -1,7 +1,10 @@
 import 'dart:math';
+import 'package:bay_lingo/quiz_easy.dart';
+
 import 'learn_letra.dart';
 import 'learn_salita.dart';
 import 'package:flutter/material.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -26,6 +29,7 @@ class MyApp extends StatelessWidget {
         '/help': (context) => const Help(),
         '/return_phrases': (context) => const LearnSalitaPhrases(),
         '/return_salita': (context) => const LearnSalita(),
+        '/quiz_easy': (context) => const QuizEasy(),
       },
     );
   }
@@ -265,7 +269,7 @@ class QuizLetra extends StatelessWidget {
               top: 20,
               child: GestureDetector(
                 onTap: () {
-                  Navigator.pushNamed(context, '/learn_letra');
+                  Navigator.pushNamed(context, '/quiz_easy');
                 },
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(26), // Set the border radius here
