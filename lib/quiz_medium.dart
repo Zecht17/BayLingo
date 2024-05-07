@@ -101,16 +101,6 @@ class _QuizMediumState extends State<QuizMedium> {
       ],
       'answerIndex': 0, // Correct answer is "/9_a.png" at index 0
     },
-    {
-      'question': 'Which Baybayin character represents the syllable “Le”?',
-      'options': [
-        '/5_a.png',
-        '/5_b.png',
-        '/5_c.png',
-        '/3_d.png'
-      ],
-      'answerIndex': 1, // Correct answer is "/5_b.png" at index 1
-    },
 
 
   ];

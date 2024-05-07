@@ -94,13 +94,6 @@ class _QuizHardState extends State<QuizHard> {
       'options': ['Pagkakaisa', 'Kakayahan', 'Paninindigan'],
       'answerIndex': 0, // Correct answer is "Mahal" at index 0
     },
-    {
-      'question': 'What word represents this Baybayin character?',
-      'image': 'assets/paumanhin.png',
-      'options': ['Paumanhin', 'Padayon', 'Pagkain'],
-      'answerIndex': 0, // Correct answer is "Mahal" at index 0
-    },
-
 
   ];
   final Random _random = Random();
