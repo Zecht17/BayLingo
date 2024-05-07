@@ -1,5 +1,6 @@
 import 'dart:math';
 import 'package:bay_lingo/quiz_easy.dart';
+import 'package:bay_lingo/quiz_medium.dart';
 
 import 'learn_letra.dart';
 import 'learn_salita.dart';
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
         '/return_phrases': (context) => const LearnSalitaPhrases(),
         '/return_salita': (context) => const LearnSalita(),
         '/quiz_easy': (context) => const QuizEasy(),
+        '/quiz_medium': (context) => const QuizMedium(),
       },
     );
   }
@@ -161,34 +163,17 @@ class BayLingo extends StatelessWidget {
             ),
             Positioned(
               left: 20,
-              top: 500,
+              top: 540,
               child: GestureDetector(
                 onTap: () {
                   Navigator.pushNamed(context, '/quiz_letra');
                 },
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(50), // Set the border radius here
+                  borderRadius: BorderRadius.circular(20), // Set the border radius here
                   child: Image.asset(
-                    'images/quiz_letra.png',
-                    width: 180,
-                    height: 180,
-                  ),
-                ),
-              ),
-            ),
-            Positioned(
-              left: 215,
-              top: 500,
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, '/quiz_salita');
-                },
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(50), // Set the border radius here
-                  child: Image.asset(
-                    'images/quiz_salita.png',
-                    width: 180,
-                    height: 180,
+                    'images/new_quiz.png',
+                    width: 380,
+                    height: 129,
                   ),
                 ),
               ),
@@ -282,12 +267,26 @@ class QuizLetra extends StatelessWidget {
                 ),
               ),
             ),
+            const Positioned(
+              left: 167,
+              top: 145,
+              child: Text(
+                'Easy',
+                style: TextStyle(
+                    fontFamily: 'Microsoft',
+                    fontSize: 40.0,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 1.0,
+                    color: Colors.black
+                ),
+              ),
+            ),
             Positioned(
               left: 20,
-              top: 280,
+              top: 210,
               child: GestureDetector(
                 onTap: () {
-                  Navigator.pushNamed(context, '/learn_letra');
+                  Navigator.pushNamed(context, '/quiz_medium');
                 },
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(26), // Set the border radius here
@@ -300,9 +299,23 @@ class QuizLetra extends StatelessWidget {
                 ),
               ),
             ),
+            const Positioned(
+              left: 145,
+              top: 335,
+              child: Text(
+                'Medium',
+                style: TextStyle(
+                    fontFamily: 'Microsoft',
+                    fontSize: 40.0,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 1.0,
+                    color: Colors.black
+                ),
+              ),
+            ),
             Positioned(
               left: 20,
-              top: 480,
+              top: 400,
               child: GestureDetector(
                 onTap: () {
                   Navigator.pushNamed(context, '/learn_letra');
@@ -315,6 +328,20 @@ class QuizLetra extends StatelessWidget {
                     height: 129,
                     fit: BoxFit.cover, // Ensure that the image covers the entire container
                   ),
+                ),
+              ),
+            ),
+            const Positioned(
+              left: 170,
+              top: 525,
+              child: Text(
+                'Hard',
+                style: TextStyle(
+                    fontFamily: 'Microsoft',
+                    fontSize: 40.0,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 1.0,
+                    color: Colors.black
                 ),
               ),
             ),

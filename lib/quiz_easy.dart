@@ -1,5 +1,6 @@
 import 'dart:math';
 import 'package:bay_lingo/home.dart';
+import 'package:bay_lingo/result.dart';
 import 'package:flutter/material.dart';
 
 class QuizEasy extends StatefulWidget {
@@ -12,14 +13,13 @@ class QuizEasy extends StatefulWidget {
 @override
 Widget build(BuildContext context) {
   return MaterialApp(
-    home: const BayLingo(),
+    initialRoute: '/quiz_easy',
     routes: {
-      '/home': (context) => const BayLingo(),
       '/quiz_easy': (context) => const QuizEasy(),
+      '/home': (context) => const BayLingo(), // Add a new route for "/home"
     },
   );
 }
-
 
 class _QuizEasyState extends State<QuizEasy> {
   // Define constants for colors and font sizes
@@ -27,6 +27,7 @@ class _QuizEasyState extends State<QuizEasy> {
   static const Color _appBarColor = Color(0xFF323232);
   static const Color _buttonColor = Color(0xFF908C8A);
   static const double _fontSize = 30; // Increase the font size here
+  int _questionsAnswered = 0;
 
   // Define a list of questions
   final List<Map<String, dynamic>> _questions = [
@@ -38,7 +39,12 @@ class _QuizEasyState extends State<QuizEasy> {
     },
     {
       'question': 'What is the baybayin character equivalent of this alphabetic character “Ma”',
-      'options': ['/bigger_ba.png', '/bigger_na.png', '/bigger_ma.png', '/bigger_sa.png'],
+      'options': [
+        '/bigger_ba.png',
+        '/bigger_na.png',
+        '/bigger_ma.png',
+        '/bigger_sa.png'
+      ],
       'answerIndex': 2, // Correct answer is "/ma.png" at index 2
     },
     {
@@ -49,7 +55,12 @@ class _QuizEasyState extends State<QuizEasy> {
     },
     {
       'question': 'What is the baybayin character equivalent of this alphabetic character “Ya”',
-      'options': ['/bigger_ha.png', '/bigger_ya.png', '/bigger_na.png', '/bigger_da.png'],
+      'options': [
+        '/bigger_ha.png',
+        '/bigger_ya.png',
+        '/bigger_na.png',
+        '/bigger_da.png'
+      ],
       'answerIndex': 1, // Correct answer is "/ya.png" at index 1
     },
     {
@@ -60,7 +71,12 @@ class _QuizEasyState extends State<QuizEasy> {
     },
     {
       'question': 'What is the baybayin character equivalent of this alphabetic character “La”',
-      'options': ['/bigger_la.png', '/bigger_o.png', '/bigger_ka.png', '/bigger_nga.png'],
+      'options': [
+        '/bigger_la.png',
+        '/bigger_o.png',
+        '/bigger_ka.png',
+        '/bigger_nga.png'
+      ],
       'answerIndex': 0, // Correct answer is "/la.png" at index 0
     },
     {
@@ -71,7 +87,12 @@ class _QuizEasyState extends State<QuizEasy> {
     },
     {
       'question': 'What is the baybayin character equivalent of this alphabetic character “Ha”',
-      'options': ['/bigger_ha.png', '/bigger_ma.png', '/bigger_ba.png', '/bigger_la.png'],
+      'options': [
+        '/bigger_ha.png',
+        '/bigger_ma.png',
+        '/bigger_ba.png',
+        '/bigger_la.png'
+      ],
       'answerIndex': 0, // Correct answer is "/ha.png" at index 0
     },
     {
@@ -82,9 +103,15 @@ class _QuizEasyState extends State<QuizEasy> {
     },
     {
       'question': 'What is the baybayin character equivalent of this alphabetic character “Ka”',
-      'options': ['/bigger_o.png', '/bigger_ka.png', '/bigger_nga.png', '/bigger_wa.png'],
+      'options': [
+        '/bigger_o.png',
+        '/bigger_ka.png',
+        '/bigger_nga.png',
+        '/bigger_wa.png'
+      ],
       'answerIndex': 1, // Correct answer is "/ka.png" at index 1
     },
+
   ];
 
   // Add a new variable to generate random numbers
@@ -103,6 +130,8 @@ class _QuizEasyState extends State<QuizEasy> {
   void initState() {
     super.initState();
     _questions.shuffle(_random);
+    _correctAnswerCount = 0; // Reset correct answer count to 0
+    _questionsAnswered = 0; // Reset questions answered to 0
   }
 
   @override
@@ -183,7 +212,9 @@ class _QuizEasyState extends State<QuizEasy> {
           // Display the question text
           Text(
             _questions[_currentQuestionIndex]['question'],
-            style: TextStyle(fontSize: _fontSize, fontWeight: FontWeight.bold, color: Colors.white),
+            style: TextStyle(fontSize: _fontSize,
+                fontWeight: FontWeight.bold,
+                color: Colors.white),
           ),
           // Display the question image (if available)
           if (_questions[_currentQuestionIndex].containsKey('image'))
@@ -201,7 +232,8 @@ class _QuizEasyState extends State<QuizEasy> {
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: List.generate(_questions[_currentQuestionIndex]['options'].length, (i) {
+        children: List.generate(
+            _questions[_currentQuestionIndex]['options'].length, (i) {
           Color buttonColor;
           String optionText;
           String optionImage = '';
@@ -218,7 +250,8 @@ class _QuizEasyState extends State<QuizEasy> {
           }
 
           if (_questions[_currentQuestionIndex]['options'][i].contains('/')) {
-            List<String> parts = _questions[_currentQuestionIndex]['options'][i].split('/');
+            List<String> parts = _questions[_currentQuestionIndex]['options'][i]
+                .split('/');
             optionText = parts[0];
             optionImage = parts[1];
           } else {
@@ -233,7 +266,8 @@ class _QuizEasyState extends State<QuizEasy> {
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: buttonColor,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(26)),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(26)),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -267,7 +301,8 @@ class _QuizEasyState extends State<QuizEasy> {
           : () {
         setState(() {
           // Check if the selected answer is correct
-          if (_selectedAnswerIndex == _questions[_currentQuestionIndex]['answerIndex']) {
+          if (_selectedAnswerIndex ==
+              _questions[_currentQuestionIndex]['answerIndex']) {
             // Show a snackbar to indicate the correct answer
             ScaffoldMessenger.of(context).showSnackBar(
               const SnackBar(content: Text('Correct!')),
@@ -280,39 +315,25 @@ class _QuizEasyState extends State<QuizEasy> {
             );
           }
 
+          // Increment questions answered
+          _questionsAnswered++;
+
           // Move to the next question
-          _currentQuestionIndex = (_currentQuestionIndex + 1) % _questions.length;
+          _currentQuestionIndex =
+              (_currentQuestionIndex + 1) % _questions.length;
           _selectedAnswerIndex = -1;
 
           // If all questions have been answered, show the result screen
-          if (_currentQuestionIndex == 0) {
-            showDialog(
-              context: context,
-              builder: (context) {
-                return AlertDialog(
-                  title: const Text('Result'),
-                  content: Text('You got $_correctAnswerCount out of ${_questions.length} questions correct!'),
-                  actions: <Widget>[
-                    TextButton(
-                      onPressed: () {
-                        Navigator.pop(context);
-                        // Reset the quiz
-                        _correctAnswerCount = 0;
-                        _currentQuestionIndex = 0;
-                        _selectedAnswerIndex = -1;
-                        _questions.shuffle(_random);
-                      },
-                      child: const Text('Restart'),
-                    ),
-                    TextButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/home');
-                      },
-                      child: const Text('Back to Home'),
-                    ),
-                  ],
-                );
-              },
+          if (_currentQuestionIndex == _questions.length - 1) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ResultsScreen(
+                  correctAnswerCount: _correctAnswerCount,
+                  totalQuestions: _questions.length,
+                  quizType: 'easy', // Pass the quiz type as 'easy'
+                ),
+              ),
             );
           }
         });
@@ -320,5 +341,4 @@ class _QuizEasyState extends State<QuizEasy> {
       child: const Text('Next'),
     );
   }
-  }
-
+}
